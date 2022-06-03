@@ -1,39 +1,6 @@
-var music = document.getElementById("music");
-var playButton = document.getElementById("play");
-var pauseButton = document.getElementById("pause");
-var playhead = document.getElementById("elapsed");
-var timeline = document.getElementById("slider");
-var timer = document.getElementById("timer");
-var duration;
-pauseButton.style.visibility = "hidden";
-
-var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
-music.addEventListener("timeupdate", timeUpdate, false);
-
-function timeUpdate() {
-	var playPercent = timelineWidth * (music.currentTime / duration);
-	playhead.style.width = playPercent + "px";
-
-	var secondsIn = Math.floor(((music.currentTime / duration) / 3.5) * 100);
-	if (secondsIn <= 9) {
-		timer.innerHTML = "0:0" + secondsIn;
-	} else {
-		timer.innerHTML = "0:" + secondsIn;
-	}
-}
-
-playButton.onclick = function() {
-	music.play();
-	playButton.style.visibility = "hidden";
-	pause.style.visibility = "visible";
-}
-
-pauseButton.onclick = function() {
-	music.pause();
-	playButton.style.visibility = "visible";
-	pause.style.visibility = "hidden";
-}
-
-music.addEventListener("canplaythrough", function () {
-	duration = music.duration;
-}, false);
+<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="js,result" data-slug-hash="YPOBEJ" data-user="ozzie" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ozzie/pen/YPOBEJ">
+  Audio Player</a> by Ozzie Kirkby (<a href="https://codepen.io/ozzie">@ozzie</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
