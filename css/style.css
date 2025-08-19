@@ -129,7 +129,7 @@ body {
 
 /* Header */
 /* Header - Minimal Design */
-/* Compact Header with Proper Horizontal Alignment */
+/* Compact Header with Perfect Mobile Logo Sizing */
 .header {
     background: var(--glass-bg);
     backdrop-filter: saturate(180%) blur(20px);
@@ -144,15 +144,15 @@ body {
 
 .header-content {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Equal left/right space, center auto-width */
-    align-items: center; /* Vertically center all items */
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     width: 100%;
     gap: 16px;
 }
 
 /* Logo Section - LEFT SIDE */
 .header-logo {
-    justify-self: start; /* Align to left */
+    justify-self: start;
 }
 
 .channel-avatar {
@@ -175,6 +175,255 @@ body {
     font-weight: 800;
     letter-spacing: -0.5px;
 }
+
+.channel-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Brand Section - CENTER */
+.header-brand {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.brand-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin: 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 2px 0 0 0;
+    opacity: 0.8;
+}
+
+/* Action Section - RIGHT SIDE */
+.header-action {
+    justify-self: end;
+}
+
+.subscribe-btn {
+    background: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+    background: linear-gradient(135deg, #E55A2B, var(--secondary-color));
+}
+
+.subscribe-icon {
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVE - BIGGER SIZES */
+@media screen and (max-width: 768px) {
+    .header-content {
+        grid-template-columns: auto 1fr auto;
+        gap: 12px;
+    }
+    
+    .channel-avatar {
+        width: 40px !important;        /* Bigger - almost desktop size */
+        height: 40px !important;
+        border-radius: 10px !important;
+    }
+    
+    .avatar-text {
+        font-size: 15px !important;    /* Nice and clear */
+        font-weight: 800 !important;
+        letter-spacing: -0.4px !important;
+    }
+    
+    .brand-title {
+        font-size: 18px;
+    }
+    
+    .brand-subtitle {
+        font-size: 10px;
+    }
+    
+    .subscribe-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .channel-avatar {
+        width: 38px !important;        /* Still quite big */
+        height: 38px !important;
+        border-radius: 10px !important;
+    }
+    
+    .avatar-text {
+        font-size: 14px !important;    /* Clear and bold */
+        font-weight: 800 !important;
+        letter-spacing: -0.3px !important;
+    }
+    
+    .brand-title {
+        font-size: 16px;
+    }
+    
+    .brand-subtitle {
+        font-size: 9px;
+    }
+    
+    .subscribe-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+    
+    .header-content {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .channel-avatar {
+        width: 36px !important;        /* Good visible size */
+        height: 36px !important;
+        border-radius: 9px !important;
+    }
+    
+    .avatar-text {
+        font-size: 13px !important;    /* Still prominent */
+        font-weight: 800 !important;
+        letter-spacing: -0.2px !important;
+    }
+    
+    .brand-title {
+        font-size: 15px;
+    }
+    
+    .brand-subtitle {
+        display: none;
+    }
+    
+    .header-content {
+        gap: 8px;
+    }
+}
+
+
+/* MOBILE RESPONSIVE - PERFECT HUMAN EYE SIZING */
+@media screen and (max-width: 768px) {
+    .header-content {
+        grid-template-columns: auto 1fr auto;
+        gap: 12px;
+    }
+    
+    .channel-avatar {
+        width: 36px !important;        /* Perfect mobile size */
+        height: 36px !important;
+        border-radius: 9px !important; /* Proportional radius */
+    }
+    
+    .avatar-text {
+        font-size: 14px !important;    /* Clear & readable */
+        font-weight: 700 !important;
+        letter-spacing: -0.3px !important;
+    }
+    
+    .brand-title {
+        font-size: 18px;
+    }
+    
+    .brand-subtitle {
+        font-size: 10px;
+    }
+    
+    .subscribe-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .channel-avatar {
+        width: 32px !important;        /* Compact but visible */
+        height: 32px !important;
+        border-radius: 8px !important;
+    }
+    
+    .avatar-text {
+        font-size: 13px !important;    /* Still readable */
+        font-weight: 700 !important;
+        letter-spacing: -0.2px !important;
+    }
+    
+    .brand-title {
+        font-size: 16px;
+    }
+    
+    .brand-subtitle {
+        font-size: 9px;
+    }
+    
+    .subscribe-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+    
+    .header-content {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .channel-avatar {
+        width: 30px !important;        /* Minimum readable size */
+        height: 30px !important;
+        border-radius: 7px !important;
+    }
+    
+    .avatar-text {
+        font-size: 12px !important;    /* Still clear */
+        font-weight: 700 !important;
+        letter-spacing: -0.1px !important;
+    }
+    
+    .brand-title {
+        font-size: 15px;
+    }
+    
+    .brand-subtitle {
+        display: none;
+    }
+    
+    .header-content {
+        gap: 8px;
+    }
+}
+
 
 .channel-avatar:hover {
     transform: scale(1.05);
