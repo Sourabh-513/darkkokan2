@@ -1,86 +1,268 @@
-<div class="wrap">
-  <h1>Material music player</h1>
-  <p>Inspired by <a href="https://dribbble.com/shots/2365362-A-or-B-Bottom-music-player-dashboard" target="_blank">Leo Leung</a> </p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Kokan - Storyteller</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="description" content="Dark Kokan - Professional storyteller bringing you captivating horror and mystery stories. Watch exclusive content and subscribe to our YouTube channel.">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-animation">
+            <div class="loading-text">Dark Kokan</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
 
-<div class="wrap">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="channel-info">
+                    <div class="channel-avatar">
+                        <span class="avatar-text">DK</span>
+                    </div>
+                    <div class="channel-details">
+                        <h1 class="channel-name">Dark Kokan</h1>
+                        <p class="channel-subtitle">Storyteller</p>
+                        <p class="subscriber-count">Growing Community of Story Lovers</p>
+                    </div>
+                </div>
+                <a href="https://www.youtube.com/@Darkkokan?sub_confirmation=1" 
+                   target="_blank" 
+                   class="subscribe-btn">
+                    <span class="subscribe-icon">📺</span>
+                    Subscribe on YouTube
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <div class="player paused">
-  
-    <div class="progress-bar">
-      <div class="runner"></div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="videos">
+                    <span class="tab-icon">🎬</span>
+                    Videos
+                </button>
+                <button class="nav-tab" data-tab="about">
+                    <span class="tab-icon">ℹ️</span>
+                    About
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Videos Tab -->
+            <div class="tab-content active" id="videos">
+                <div class="section-header">
+                    <h2>Latest Stories</h2>
+                    <p>Dive into captivating tales that will keep you on the edge of your seat</p>
+                </div>
+                
+                <div class="videos-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card" onclick="openVideoModal('PCKNptxYuSw', 'Dark Mystery Story')">
+                        <div class="video-thumbnail-container">
+                            <img src="https://img.youtube.com/vi/PCKNptxYuSw/maxresdefault.jpg" 
+                                 alt="Dark Mystery Story Thumbnail" 
+                                 class="video-thumbnail">
+                            <div class="play-overlay">
+                                <div class="play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Dark Mystery Story</h3>
+                            <p class="video-description">A thrilling tale that will send shivers down your spine and keep you guessing until the very end...</p>
+                            <div class="video-meta">
+                                <span class="video-views">Click to Watch</span>
+                                <a href="https://youtu.be/PCKNptxYuSw" 
+                                   target="_blank" 
+                                   class="youtube-link" 
+                                   onclick="event.stopPropagation()">
+                                   View on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-card" onclick="openVideoModal('WiW2dORxhEk', 'Suspense Chronicles')">
+                        <div class="video-thumbnail-container">
+                            <img src="https://img.youtube.com/vi/WiW2dORxhEk/maxresdefault.jpg" 
+                                 alt="Suspense Chronicles Thumbnail" 
+                                 class="video-thumbnail">
+                            <div class="play-overlay">
+                                <div class="play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Suspense Chronicles</h3>
+                            <p class="video-description">An intense story filled with unexpected twists and turns that will leave you breathless...</p>
+                            <div class="video-meta">
+                                <span class="video-views">Click to Watch</span>
+                                <a href="https://youtu.be/WiW2dORxhEk" 
+                                   target="_blank" 
+                                   class="youtube-link" 
+                                   onclick="event.stopPropagation()">
+                                   View on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-card" onclick="openVideoModal('r1QN2pbuIMs', 'Horror Tales')">
+                        <div class="video-thumbnail-container">
+                            <img src="https://img.youtube.com/vi/r1QN2pbuIMs/maxresdefault.jpg" 
+                                 alt="Horror Tales Thumbnail" 
+                                 class="video-thumbnail">
+                            <div class="play-overlay">
+                                <div class="play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Horror Tales</h3>
+                            <p class="video-description">Step into the world of spine-chilling horror where nightmares come to life...</p>
+                            <div class="video-meta">
+                                <span class="video-views">Click to Watch</span>
+                                <a href="https://youtu.be/r1QN2pbuIMs" 
+                                   target="_blank" 
+                                   class="youtube-link" 
+                                   onclick="event.stopPropagation()">
+                                   View on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="video-card" onclick="openVideoModal('F5oucUXXwVQ', 'Dark Legends')">
+                        <div class="video-thumbnail-container">
+                            <img src="https://img.youtube.com/vi/F5oucUXXwVQ/maxresdefault.jpg" 
+                                 alt="Dark Legends Thumbnail" 
+                                 class="video-thumbnail">
+                            <div class="play-overlay">
+                                <div class="play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Dark Legends</h3>
+                            <p class="video-description">Explore ancient legends and forgotten tales from the darkest corners of history...</p>
+                            <div class="video-meta">
+                                <span class="video-views">Click to Watch</span>
+                                <a href="https://youtu.be/F5oucUXXwVQ" 
+                                   target="_blank" 
+                                   class="youtube-link" 
+                                   onclick="event.stopPropagation()">
+                                   View on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <h3>Want More Stories?</h3>
+                    <p>Subscribe to Dark Kokan on YouTube for the latest storytelling content</p>
+                    <a href="https://www.youtube.com/@Darkkokan?sub_confirmation=1" 
+                       target="_blank" 
+                       class="cta-button">
+                        Subscribe Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- About Tab -->
+            <div class="tab-content" id="about">
+                <div class="about-section">
+                    <div class="about-header">
+                        <h2>About Dark Kokan</h2>
+                        <div class="about-avatar">
+                            <span class="avatar-text">DK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <p class="channel-description">
+                            Welcome to the dark corner of storytelling! I'm Dark Kokan, your guide through 
+                            the mysterious, thrilling, and spine-chilling world of stories. From horror tales 
+                            that will keep you awake at night to suspenseful mysteries that will keep you 
+                            guessing, every story is crafted to give you an unforgettable experience.
+                        </p>
+                        
+                        <p class="channel-description">
+                            Join our growing community of story enthusiasts and dive deep into narratives 
+                            that explore the darker side of human nature, supernatural encounters, and 
+                            mysteries that defy explanation.
+                        </p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-icon">📺</span>
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Stories</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-icon">👥</span>
+                            <span class="stat-number">Growing</span>
+                            <span class="stat-label">Community</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-icon">🎬</span>
+                            <span class="stat-number">Premium</span>
+                            <span class="stat-label">Content</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-section">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@Darkkokan" 
+                               target="_blank" 
+                               class="social-link youtube">
+                                <span class="social-icon">📺</span>
+                                YouTube Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-backdrop" onclick="closeVideoModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeVideoModal()">×</button>
+            <div class="modal-header">
+                <h3 id="modalTitle">Video Title</h3>
+            </div>
+            <div class="video-container" id="modalVideoContainer">
+                <!-- Video will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <a href="#" 
+                   id="modalYouTubeLink" 
+                   target="_blank" 
+                   class="modal-youtube-btn">
+                    Watch on YouTube
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="album-art">
-      <div class="cover"></div>
-    </div>
-    
-    <div class="description">
-      <div class="title">Something from nothing  </div>
-      <div class="sub-title">by Foo Fighters, Sonic highways</div>
-    </div>
-    
-    <div class="visualizer">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-      
-    <div class="play-button">
-      <div class="lp-background"></div>
-      <i class="mdi mdi-play"></i>
-      <i class="mdi mdi-pause"></i>
-    </div>
-    
-    <div class="time-indicator">
-      <i class="mdi mdi-clock"></i>
-      <span class="time">03:39</span>
-    </div>
-    
-    
-  </div>
-  
-</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
