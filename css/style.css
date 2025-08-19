@@ -683,6 +683,13 @@ body {
     box-shadow: var(--shadow-light);
 }
 
+.social-link.instagram {
+    background: linear-gradient(135deg, #FF6B35, #E55A2B);
+    box-shadow: var(--shadow-light);
+}
+
+
+
 .social-link:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-medium);
