@@ -450,3 +450,4 @@ if ('serviceWorker' in navigator) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = DarkKokanWebsite;
 }
+
