@@ -1255,8 +1255,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .subscribe-btn {
-        padding: 5px 10px;
-        font-size: 10px;
+        padding: 11px 14px;
+        font-size: 13px;
     }
     
     .subscribe-icon {
@@ -1266,11 +1266,11 @@ body {
 
 @media screen and (max-width: 480px) {
     .subscribe-btn {
-        padding: 7px 11px;
-        font-size: 9px;
+        padding: 11px 14px;
+        font-size: 10px;
     }
     
     .subscribe-icon {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
