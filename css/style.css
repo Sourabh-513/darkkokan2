@@ -219,10 +219,10 @@ body {
     background: var(--gradient-primary);
     color: white;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 6px 12px;              /* Changed */
     border-radius: 16px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;                /* Changed */
     display: flex;
     align-items: center;
     gap: 4px;
@@ -232,6 +232,7 @@ body {
     cursor: pointer;
     white-space: nowrap;
 }
+
 
 .subscribe-btn:hover {
     transform: translateY(-1px);
@@ -489,7 +490,7 @@ body {
 }
 
 .subscribe-icon {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Mobile Responsive */
@@ -1246,5 +1247,30 @@ body {
     
     .about-avatar .avatar-text {
         font-size: 40px;
+    }
+}
+
+/* newly added on evening 5:41 20 Aug 2025 */
+
+
+@media screen and (max-width: 768px) {
+    .subscribe-btn {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    
+    .subscribe-icon {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .subscribe-btn {
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+    
+    .subscribe-icon {
+        font-size: 10px;
     }
 }
